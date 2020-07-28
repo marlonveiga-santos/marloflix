@@ -14,9 +14,13 @@ function App() {
         url={dados_iniciais.categorias[0].videos[0].url}
         videoDescription={dados_iniciais.categorias[0].videos[0].titulo}
       />
-       {dados_iniciais.categorias.map(((item, index) => 
-         <Carousel key={index} ignoreFirstVideo category={item} />
-        ))}
+      {dados_iniciais.categorias.map((item, index) =>
+        index == 0 ? (
+          <Carousel ignoreFirstVideo key={index} category={item} />
+        ) : (
+          <Carousel key={index} category={item} />
+        )
+      )}
       <Footer />
     </div>
   );

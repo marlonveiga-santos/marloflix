@@ -44,6 +44,70 @@
       ]
     },
     {
+      "titulo": "International",
+      "cor": "#841306",
+      "link_extra": {
+        "text": "And Reddit",
+        "url": "https://www.reddit.com/r/react/"
+      },
+      "videos": [
+        {
+          "titulo": "React JS Crash Course",
+          "url": "https://www.youtube.com/watch?v=sBws8MSXN7A"
+        },
+        {
+          "titulo": "Os básicos do BASIC, a linguagem de programação dos anos 1980",
+          "url": "https://www.youtube.com/watch?v=seM9SqTsRG4"
+        },
+        {
+          "titulo": "Fetch And Post Requests In A Material UI React App To A Rails 6 API Backend",
+          "url": "https://www.youtube.com/watch?v=hBW1a4sQ4Ig"
+        },
+        {
+          "titulo": "My 3 Favorite VS Code Extensions",
+          "url": "https://www.youtube.com/watch?v=4PboVhESamk&t=8s"
+        }, 
+        {
+          "titulo": "Multi Step Form With React & Material UI",
+          "url": "https://www.youtube.com/watch?v=zT62eVxShsY"
+        }
+      ]
+    },
+    {
+      "titulo": "Retro Gaming",
+      "cor": "#333",
+      "link_extra": {
+        "text": "Dicas e passwords",
+        "url": "https://gamefaqs.gamespot.com/"
+      },
+      "videos": [
+        {
+          "titulo": "PS4 (???) Longplay 99Vidas",
+          "url": "https://www.youtube.com/watch?v=xsL6PiHimew"
+        },
+        {
+          "titulo": "Mode 7 - Por Dentro do Poder do Super Nintendo",
+          "url": "https://www.youtube.com/watch?v=34CWF0g11MI"
+        },
+        {
+          "titulo": "Ninja Baseball Batman - Arcade - Angry Video Game Nerd",
+          "url": "https://www.youtube.com/watch?v=Kb4-1G4Tc-I"
+        },
+        {
+          "titulo": "Relaxing and Calm Music from Nintendo Games",
+          "url": "https://www.youtube.com/watch?v=oUHvYOYMNJk"
+        }, 
+        {
+          "titulo": "Arcade Longplay Gradius III",
+          "url": "https://www.youtube.com/watch?v=KMf-pNBCG_4"
+        }, 
+        {
+          "titulo": "AVGN: Dracula",
+          "url": "https://www.youtube.com/watch?v=6q2HcO75bAU"
+        }
+      ]
+    },
+    {
       "titulo": "Back End",
       "cor": "#00C86F",
       "link_extra": {
