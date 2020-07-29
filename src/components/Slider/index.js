@@ -16,7 +16,7 @@ const Container = styled.ul`
     height: 30px;
     transform: initial;
     &:before {
-      font-size: 46px;
+      font-size: 36px;
       color: ${(props) => props.arrow};
     }
   }
