@@ -18,7 +18,13 @@ function VideoCard({ videoTitle, videoURL, categoryColor }) {
       target="_blank"
       style={{ borderColor: categoryColor || 'red' }}
       title={videoTitle}
-    />
+    >
+                 <div>
+                <video className="video-container video-container-overlay" autoPlay="true" loop>
+                    <source src={ videoURL } type="video/mp4" />
+                </video>
+            </div>
+    </VideoCardContainer>
   );
 }
 

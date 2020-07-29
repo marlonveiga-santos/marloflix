@@ -25,14 +25,14 @@ function Carousel({
           }
         </>
       )}
-      <Slider>
+      <Slider arrow={categoryColor} >
         {videos.map((video, index) => {
           if (ignoreFirstVideo && index === 0) {
             return null;
           }
 
           return (
-            <SliderItem key={video.titulo}>
+            <SliderItem key={video.titulo} >
               <VideoCard
                 videoTitle={video.titulo}
                 videoURL={video.url}
