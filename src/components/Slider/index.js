@@ -17,7 +17,12 @@ const Container = styled.ul`
     transform: initial;
     &:before {
       font-size: 36px;
-      color: ${(props) => props.arrow};
+      color: white;
+      background: ${(props) => props.arrow};
+      height: 118px;
+      padding-top: 80px;
+      padding-right:10px;
+      padding-left:10px;
     }
   }
 
@@ -36,14 +41,12 @@ function NextArrow(props) {
       className={className}
       style={{
         ...style,
-        textColor: "green",
-        background: `linear-gradient(-90deg, #000, transparent)`,
-        height: "197px",
+        height: "198px",
         display: "flex",
         justifyContent: "center",
         alignItems: "center",
-        padding: "5vh",
         marginRight: -16,
+        marginBottom: 18,
       }}
       onClick={onClick}
     />
@@ -62,6 +65,7 @@ function PrevArrow(props) {
         display: "flex",
         justifyContent: "center",
         alignItems: "center",
+        marginBottom: 18,
       }}
       onClick={onClick}
     />
@@ -89,7 +93,6 @@ function Slider(props) {
           speed: 500,
           centerMode: true,
           variableWidth: true,
-          adaptiveHeight: true,
           initialSlide: 2,
           accessibility: true,
           focusOnSelect: true,
