@@ -1,94 +1,114 @@
-import React from "react";
-import TextField from "@material-ui/core/TextField";
-import { makeStyles, withStyles } from "@material-ui/core/styles";
-import "./styles.css";
+import React from 'react';
+import PropTypes from 'prop-types';
+import styled, { css } from 'styled-components';
 
-const useStyles = makeStyles((theme) => ({
-  root: {
-    "& > *": {
-      margin: theme.spacing(1),
-      width: "20ch",
-      color: "white",
-    },
-  },
-}));
+const FormFieldWrapper = styled.div`
+  position: relative;
 
-const CustomInput = withStyles({
-  root: {
-    "& label.Mui-focused": {
-      color: "var(--white)",
-    },
-    "& .MuiOutlinedInput-root": {
-      "& fieldset": {
-        borderColor: "var(--white)",
-      },
-      "&:hover fieldset": {
-        borderColor: "var(--blackLighter)",
-      },
-      "&:hover": {
-        color: "var(--blackLighter)",
-      },
-      "&.Mui-focused fieldset": {
-        borderColor: "var(--white)",
-        color: "var(--white)",
-      },
-      "&.MuiInput.input": {
-        color: "var(--white)",
-      },
-    },
-  },
-})(TextField);
+  textarea {
+    min-height: 150px;
+  }
 
-function FormField({ label, type, name, value, onChange }) {
-  const classes = useStyles();
+  input[type="color"] {
+    padding-left: 56px;
+  }
+`;
 
-  const renderSwitch = (param) => {
-    switch (param) {
-      case "textarea":
-        return (
-          <div>
-            <CustomInput
-              multiline
-              className={classes.root}
-              label={label}
-              value={value}
-              name={name}
-              onChange={onChange}
-              variant="outlined"
-            />
-          </div>
-        );
-      case "color":
-        return (
-          <div>
-            <label>
-              {label}:&nbsp;
-              <input
-                type={type}
-                value={value}
-                name={name}
-                onChange={onChange}
-              />
-            </label>
-          </div>
-        );
-      default:
-        return (
-          <div>
-            <CustomInput
-              className={classes.root}
-              label={label}
-              value={value}
-              name={name}
-              onChange={onChange}
-              variant="outlined"
-            />
-          </div>
-        );
-    }
-  };
+const Label = styled.label``;
 
-  return renderSwitch(type);
+Label.Text = styled.span`
+  color: #E5E5E5;
+  height: 57px;
+  position: absolute; 
+  top: 0;
+  left: 16px;
+  
+  display: flex;
+  align-items: center;
+  
+  transform-origin: 0% 0%;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 300;
+  
+  transition: .1s ease-in-out;
+`;
+
+const Input = styled.input`
+  background: var(--black);
+  color: var(--white);
+  display: block;
+  width: 100%;
+  height: 57px;
+  font-size: 18px;
+  
+  outline: 0;
+  border: 0;
+  border-top: 4px solid transparent;
+  border-bottom: 4px solid var(--black);
+  
+  padding: 16px 16px;
+  margin-bottom: 45px;
+  
+  resize: none;
+  border-radius: 4px;
+  transition: border-color .3s;
+  
+  &:focus {
+    border-bottom-color: var(--primary);
+  }
+
+  &:focus:not([type='color']) + ${Label.Text} {
+    transform: scale(.6) translateY(-10px);
+  }
+
+  ${({ value }) => {
+    const hasValue = value.length > 0;
+    return hasValue && css`
+        &:not([type='color']) + ${Label.Text} {
+          transform: scale(.6) translateY(-10px);
+        }
+      `;
+  }
 }
+`;
+
+function FormField({
+  label, type, name, value, onChange,
+}) {
+  const isTypeTextArea = type === 'textarea';
+  const tag = isTypeTextArea ? 'textarea' : 'input';
+
+  return (
+    <FormFieldWrapper>
+      <Label>
+        <Input
+          as={tag}
+          type={type}
+          value={value}
+          name={name}
+          onChange={onChange}
+        />
+        <Label.Text>
+          {label}
+          :
+        </Label.Text>
+      </Label>
+    </FormFieldWrapper>
+  );
+}
+
+FormField.defaultProps = {
+  type: 'text',
+  value: '',
+};
+
+FormField.propTypes = {
+  label: PropTypes.string.isRequired,
+  name: PropTypes.string.isRequired,
+  type: PropTypes.string,
+  value: PropTypes.string,
+  onChange: PropTypes.func.isRequired,
+};
 
 export default FormField;
