@@ -40,6 +40,24 @@
         "text": "Formação de Jogos na Alura",
         "url": "https://www.alura.com.br/cursos-online-front-end"
       }
+    },
+    {
+      "id": 6,
+      "titulo": "International",
+      "cor": "#8413f6",
+      "link_extra": {
+        "text": "And Reddit",
+        "url": "https://www.reddit.com/r/react/"
+      }
+    },
+    {
+      "id": 7,
+      "titulo": "Retro Gaming",
+      "cor": "#833",
+      "link_extra": {
+        "text": "Dicas e passwords",
+        "url": "https://gamefaqs.gamespot.com/"
+      }
     }
   ],
   "videos": [
@@ -186,6 +204,72 @@
       "categoriaId": 5,
       "titulo": "Resident Evil 8",
       "url": "https://www.youtube.com/watch?v=JSapXD9vxYA"
+    },
+    {
+      "id": 25,
+      "categoriaId": 6,
+      "titulo": "React JS Crash Course",
+      "url": "https://www.youtube.com/watch?v=sBws8MSXN7A"
+    },
+    {
+      "id": 26,
+      "categoriaId": 6,
+      "titulo": "Os básicos do BASIC, a linguagem de programação dos anos 1980",
+      "url": "https://www.youtube.com/watch?v=seM9SqTsRG4"
+    },
+    {
+      "id": 27,
+      "categoriaId": 6,
+      "titulo": "Fetch And Post Requests In A Material UI React App To A Rails 6 API Backend",
+      "url": "https://www.youtube.com/watch?v=hBW1a4sQ4Ig"
+    },
+    {
+      "id": 28,
+      "categoriaId": 6,
+      "titulo": "My 3 Favorite VS Code Extensions",
+      "url": "https://www.youtube.com/watch?v=4PboVhESamk&t=8s"
+    },
+    {
+      "id": 29,
+      "categoriaId": 6,
+      "titulo": "Multi Step Form With React & Material UI",
+      "url": "https://www.youtube.com/watch?v=zT62eVxShsY"
+    },
+    {
+      "id": 30,
+      "categoriaId": 7,
+      "titulo": "PS4 (???) Longplay 99Vidas",
+      "url": "https://www.youtube.com/watch?v=xsL6PiHimew"
+    },
+    {
+      "id": 31,
+      "categoriaId": 7,
+      "titulo": "Mode 7 - Por Dentro do Poder do Super Nintendo",
+      "url": "https://www.youtube.com/watch?v=34CWF0g11MI"
+    },
+    {
+      "id": 32,
+      "categoriaId": 7,
+      "titulo": "Ninja Baseball Batman - Arcade - Angry Video Game Nerd",
+      "url": "https://www.youtube.com/watch?v=Kb4-1G4Tc-I"
+    },
+    {
+      "id": 33,
+      "categoriaId": 7,
+      "titulo": "Relaxing and Calm Music from Nintendo Games",
+      "url": "https://www.youtube.com/watch?v=oUHvYOYMNJk"
+    },
+    {
+      "id": 34,
+      "categoriaId": 7,
+      "titulo": "Arcade Longplay Gradius III",
+      "url": "https://www.youtube.com/watch?v=KMf-pNBCG_4"
+    },
+    {
+      "id": 35,
+      "categoriaId": 7,
+      "titulo": "AVGN: Dracula",
+      "url": "https://www.youtube.com/watch?v=6q2HcO75bAU"
     }
   ]
 }
