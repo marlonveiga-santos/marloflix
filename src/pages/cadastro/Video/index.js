@@ -70,7 +70,7 @@ function CadastroVideo() {
           suggestions={categoryTitles}
         />
 
-        <Button className="ButtonLink" type="submit">
+        <Button as="button"  className="ButtonLink" type="submit">
           Cadastrar
         </Button>
       </form>

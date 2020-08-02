@@ -19,7 +19,7 @@ const Button = styled(Link) `
 }
 &:hover,
 &:focus {
-  opacity: .5;
+  opacity: .6;
 }
 `;
 
